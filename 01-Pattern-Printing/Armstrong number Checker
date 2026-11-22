@@ -1,0 +1,25 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+    int n,dcount=0,digit;
+    cout<<"Enter the value of n: ";
+    cin>>n;
+    int temp=n,total_sum=0;
+    while(temp>0){
+        dcount++;
+        temp=temp/10;
+    }
+    temp=n; 
+    while(temp>0){
+        int dcube1;
+        digit = temp%10;
+        dcube1 = pow(digit,dcount);
+        total_sum+=dcube1;
+        temp = temp/10;
+        }
+        cout<<total_sum<<endl;
+        cout<<(total_sum==n?"This is an armstrong number":"This is not an armstrong number");
+    
+}
