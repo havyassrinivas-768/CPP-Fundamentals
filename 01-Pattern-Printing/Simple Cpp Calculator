@@ -1,0 +1,55 @@
+#include<iostream>
+using namespace std;
+int add(int a,int b){
+    int sum=a+b;
+    return sum;
+}
+int sub(int a,int b){
+    int difference=a-b;
+    return difference;
+}
+int multiply(int a,int b){
+    int product=a*b;
+    return product;
+}
+int division(int a,int b){
+    int quotient=a/b;
+    return quotient;
+}
+int main()
+{
+    int a,b;
+    char op;
+    cout<<"Enter the value of first number a: ";
+    cin>>a;
+    cout<<"Enter the value of second number b: ";
+    cin>>b;
+    cout<<"Choose Operation:+,-,*,/     ";
+    cin>>op;
+    switch(op)
+{
+    case '+':
+        cout << add(a,b);
+        break;
+
+    case '-':
+        cout << sub(a,b);
+        break;
+
+    case '*':
+        cout << multiply(a,b);
+        break;
+
+    case '/':
+        if(b != 0)
+            cout << division(a,b);
+        else
+            cout << "Division by zero is not allowed.";
+        break;
+
+    default:
+        cout << "Invalid operator";
+}
+    
+    
+}
